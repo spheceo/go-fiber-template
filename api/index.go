@@ -8,14 +8,14 @@ import (
 	"github.com/gofiber/fiber/v3/middleware/cors"
 )
 
+func favicon(c fiber.Ctx) error {
+	return c.SendFile("./public/favicon.ico")
+}
+
 func index(c fiber.Ctx) error {
 	return c.JSON(&fiber.Map{
 		"message": "Welcome to {{ project_name }}!",
 	})
-}
-
-func favicon(c fiber.Ctx) error {
-	return c.SendFile("./public/favicon.ico")
 }
 
 // HTTP Handler which Vercel looks for
