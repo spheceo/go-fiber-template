@@ -10,7 +10,7 @@ import (
 
 func index(c fiber.Ctx) error {
 	return c.JSON(&fiber.Map{
-		"message": "Welcome to the {{ project_name }}!",
+		"message": "Welcome to {{ project_name }}!",
 	})
 }
 
